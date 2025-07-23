@@ -1,0 +1,13 @@
+.smart-neo-client-history-container {
+  flex: 0.75;
+  overflow: auto;
+}
+
+.smart-neo-client-history-user-message {
+  margin-left: 20%;
+  color: var(--N500);
+}
+
+.smart-neo-client-history-assistant-message {
+  margin-right: 20%;
+}

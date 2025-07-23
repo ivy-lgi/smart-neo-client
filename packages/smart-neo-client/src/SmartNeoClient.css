@@ -1,0 +1,5 @@
+.smart-neo-client-container {
+  height: 100%;
+  padding: var(--size-4);
+  box-sizing: border-box;
+}
