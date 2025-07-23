@@ -14,13 +14,26 @@ export const Prompt = ({ sendPrompt }: PromptProps) => {
   const [prompt, setPrompt] = useState('');
 
   const send = () => {
+    if (!prompt) {
+      return;
+    }
     setPrompt('');
     sendPrompt(prompt);
   };
 
   return (
     <Flex direction='column' gap={1} className='smart-neo-client-prompt-container'>
-      <Textarea value={prompt} onChange={event => setPrompt(event.target.value)} style={{ height: '100%' }} />
+      <Textarea
+        value={prompt}
+        onChange={event => setPrompt(event.target.value)}
+        style={{ height: '100%' }}
+        onKeyDown={event => {
+          if (event.key === 'Enter' && !event.shiftKey) {
+            event.preventDefault();
+            send();
+          }
+        }}
+      />
       <Flex justifyContent='flex-end'>
         <Button size='large' icon={IvyIcons.Play} aria-label={t('common.label.send')} onClick={send} />
       </Flex>
