@@ -6,15 +6,16 @@ import './Prompt.css';
 
 type PromptProps = {
   sendPrompt: (userMessage: string) => void;
+  disabled: boolean;
 };
 
-export const Prompt = ({ sendPrompt }: PromptProps) => {
+export const Prompt = ({ sendPrompt, disabled }: PromptProps) => {
   const { t } = useTranslation();
 
   const [prompt, setPrompt] = useState('');
 
   const send = () => {
-    if (!prompt) {
+    if (!prompt || disabled) {
       return;
     }
     setPrompt('');
@@ -33,9 +34,10 @@ export const Prompt = ({ sendPrompt }: PromptProps) => {
             send();
           }
         }}
+        disabled={disabled}
       />
       <Flex justifyContent='flex-end'>
-        <Button size='large' icon={IvyIcons.Play} aria-label={t('common.label.send')} onClick={send} />
+        <Button size='large' icon={IvyIcons.Play} aria-label={t('common.label.send')} onClick={send} disabled={disabled} />
       </Flex>
     </Flex>
   );
