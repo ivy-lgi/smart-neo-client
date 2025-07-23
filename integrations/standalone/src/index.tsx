@@ -1,4 +1,4 @@
-import { SmartNeoClient } from '@axonivy/smart-neo-client';
+import { initQueryClient, QueryProvider, SmartNeoClient } from '@axonivy/smart-neo-client';
 import { HotkeysProvider, ThemeProvider } from '@axonivy/ui-components';
 import React from 'react';
 import * as ReactDOM from 'react-dom/client';
@@ -13,15 +13,18 @@ if (!rootElement) {
 const root = ReactDOM.createRoot(rootElement);
 
 const theme = themeParam();
+const queryClient = initQueryClient();
 
 initTranslation();
 
 root.render(
   <React.StrictMode>
     <ThemeProvider defaultTheme={theme}>
-      <HotkeysProvider initiallyActiveScopes={['global']}>
-        <SmartNeoClient/>
-      </HotkeysProvider>
+      <QueryProvider client={queryClient}>
+        <HotkeysProvider initiallyActiveScopes={['global']}>
+          <SmartNeoClient />
+        </HotkeysProvider>
+      </QueryProvider>
     </ThemeProvider>
   </React.StrictMode>
 );
