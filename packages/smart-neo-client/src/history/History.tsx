@@ -10,7 +10,7 @@ type HistoryProps = {
 
 export const History = ({ userMessage, assistantMessage, errorMessage, isPending }: HistoryProps) => {
   return (
-    <Flex direction='column' className='smart-neo-client-history-container'>
+    <Flex direction='column' gap={4} className='smart-neo-client-history-container'>
       <div className='smart-neo-client-history-user-message'>{userMessage}</div>
       <div className='smart-neo-client-history-assistant-message'>
         {errorMessage ? <Message message={errorMessage} variant='error' /> : assistantMessage}
