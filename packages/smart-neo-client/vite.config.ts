@@ -31,6 +31,9 @@ export default defineConfig({
   test: {
     dir: 'src',
     include: ['**/*.test.ts?(x)'],
+    alias: {
+      '@axonivy/smart-neo-client-protocol': resolve(__dirname, '../../packages/protocol/src')
+    },
     globals: true,
     environment: 'jsdom',
     setupFiles: ['src/context/test-utils/setup-tests.tsx'],

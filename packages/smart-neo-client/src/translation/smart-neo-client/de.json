@@ -1,7 +1,11 @@
 {
   "common": {
     "label": {
+      "reload": "Neu laden",
       "send": "Senden"
     }
+  },
+  "toast": {
+    "unauthorized": "Nicht autorisiert, klicken Sie auf 'Neu laden', um sich anzumelden."
   }
 }

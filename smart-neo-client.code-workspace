@@ -12,6 +12,10 @@
       "path": "./packages/smart-neo-client"
     },
     {
+      "name": "package/protocol",
+      "path": "./packages/protocol"
+    },
+    {
       "name": "integrations/standalone",
       "path": "./integrations/standalone"
     }

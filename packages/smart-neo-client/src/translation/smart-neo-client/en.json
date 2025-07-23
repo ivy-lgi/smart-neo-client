@@ -1,7 +1,11 @@
 {
   "common": {
     "label": {
+      "reload": "Reload",
       "send": "Send"
     }
+  },
+  "toast": {
+    "unauthorized": "Unauthorized, click reload to log in."
   }
 }

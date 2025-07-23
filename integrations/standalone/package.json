@@ -4,7 +4,7 @@
   "version": "1.0.0-next",
   "dependencies": {
     "@axonivy/smart-neo-client": "~1.0.0-next",
-    "@axonivy/jsonrpc": "~13.2.0-next.810.eda0f14",
+    "@axonivy/smart-neo-client-protocol": "~1.0.0-next",
     "@axonivy/ui-components": "~13.2.0-next.810.eda0f14",
     "@axonivy/ui-icons": "~13.2.0-next.810.eda0f14",
     "@tanstack/react-query": "^5.64",

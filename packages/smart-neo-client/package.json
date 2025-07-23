@@ -16,8 +16,10 @@
   "module": "lib/client.js",
   "types": "lib/index.d.ts",
   "main": "lib/client.js",
+  "dependencies": {
+    "@axonivy/smart-neo-client-protocol": "~1.0.0-next"
+  },
   "peerDependencies": {
-    "@axonivy/jsonrpc": "~13.2.0-next",
     "@axonivy/ui-components": "~13.2.0-next",
     "@axonivy/ui-icons": "~13.2.0-next",
     "@tanstack/react-query": "^5.64",

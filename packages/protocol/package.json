@@ -1,0 +1,32 @@
+{
+  "name": "@axonivy/smart-neo-client-protocol",
+  "version": "1.0.0-next",
+  "private": false,
+  "license": "Apache-2.0",
+  "author": "Axon Ivy AG",
+  "homepage": "https://developer.axonivy.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ivy-lgi/smart-neo-client"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "type": "module",
+  "types": "./lib/index.d.ts",
+  "module": "./lib/protocol.js",
+  "source": "./src/index",
+  "scripts": {
+    "clean": "rimraf lib tsconfig.tsbuildinfo",
+    "build": "tsc --build",
+    "package": "vite build",
+    "build:clean": "npm run clean && npm run generate && npm run build",
+    "generate": "orval",
+    "type": "tsc --noEmit",
+    "download:openapi": "curl -o target/engine/openapi.json http://localhost:8081/api/openapi.json --create-dirs"
+  },
+  "devDependencies": {
+    "orval": "7.10.0"
+  }
+}
