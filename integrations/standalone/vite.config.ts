@@ -13,6 +13,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@axonivy/smart-neo-client': resolve(__dirname, '../../packages/smart-neo-client/src'),
+      '@axonivy/smart-neo-client-protocol': resolve(__dirname, '../../packages/protocol/src')
     }
   },
   base: './'

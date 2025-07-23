@@ -20,6 +20,7 @@
     "lint:inspect": "eslint --inspect-config",
     "i18n:extract": "lerna run i18n:extract",
     "i18n:ci": "lerna run i18n:ci",
+    "protocol": "npm run -w @axonivy/smart-neo-client-protocol",
     "dev": "npm run -w @axonivy/smart-neo-client-standalone dev",
     "test": "npm run -w @axonivy/smart-neo-client test",
     "test:ci": "npm run -w @axonivy/smart-neo-client test:ci",

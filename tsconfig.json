@@ -6,6 +6,7 @@
   },
   "references": [
     { "path": "integrations/standalone/tsconfig.json" },
-    { "path": "packages/smart-neo-client/tsconfig.json" }
+    { "path": "packages/smart-neo-client/tsconfig.json" },
+    { "path": "packages/protocol/tsconfig.json" }
   ]
 }
