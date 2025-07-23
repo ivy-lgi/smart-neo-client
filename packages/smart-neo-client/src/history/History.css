@@ -4,6 +4,7 @@
 }
 
 .smart-neo-client-history-user-message {
+  align-self: flex-end;
   margin-left: 20%;
   color: var(--N500);
 }
