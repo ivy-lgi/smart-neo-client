@@ -11,7 +11,7 @@ const override = {
 export default defineConfig({
   openapiIvy: {
     input: {
-      target: 'target/engine/openapi.json',
+      target: 'target/smart-neo/openapi.json',
       filters: { tags: ['smart-neo'] }
     },
     output: {
