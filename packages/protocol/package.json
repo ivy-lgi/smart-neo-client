@@ -24,7 +24,7 @@
     "build:clean": "npm run clean && npm run generate && npm run build",
     "generate": "orval",
     "type": "tsc --noEmit",
-    "download:openapi": "curl -o target/engine/openapi.json http://localhost:8081/api/openapi.json --create-dirs"
+    "download:openapi": "mvn clean validate"
   },
   "devDependencies": {
     "orval": "7.10.0"
